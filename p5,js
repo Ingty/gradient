@@ -8,7 +8,6 @@ function setup() {
 }
 function draw() {
   i++;
-  print(i);
   r = Math.sin(freq*i + phase) * 127 + 128;
   g = Math.sin(freq*i + (phase+2)) * 127 + 128;
   b = Math.sin(freq*i + (phase+4)) * 127 + 128;
