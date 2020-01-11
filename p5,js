@@ -1,0 +1,20 @@
+var freq = 0.05;
+var phase = 0;
+var len = 1000;
+var i = 0;
+function setup() {
+  createCanvas(1000, 1000);
+  frameRate(60);
+}
+function draw() {
+  i++;
+  print(i);
+  r = Math.sin(freq*i + phase) * 127 + 128;
+  g = Math.sin(freq*i + (phase+2)) * 127 + 128;
+  b = Math.sin(freq*i + (phase+4)) * 127 + 128;
+  stroke(r,g,b);
+  fill(r,g,b);
+  rect(0,0,1000,1000);
+  //arc(200, 200, 200, 200, PI/180*i, PI/180*(i+1));
+  loop();
+}
